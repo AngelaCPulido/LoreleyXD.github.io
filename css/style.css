@@ -11,7 +11,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Oxygen", sans-serif;
+  font-family: "Roboto Salp", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.7;
@@ -362,8 +362,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-hero .flexslider .slides li {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom center;
-  min-height: 500px;
+  background-position: bottom center;  
   position: relative;
 }
 #fh5co-hero .flexslider .flex-control-nav {
@@ -1472,5 +1471,8 @@ input[type="text"] {
   font-weight: 400;
 }
 
+.foto{
+  background-color: gray;
+}
 
 /*# sourceMappingURL=style.css.map */
