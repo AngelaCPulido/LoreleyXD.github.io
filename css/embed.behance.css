@@ -65,16 +65,22 @@ a:hover, a:active, a:focus {
 }
 
 .eb-pagination-button, .eb-container aside .wrap-project-url a{
-	border-radius: 5px;
-	padding: 1em 2em;
-	text-align: center;
-	border: 1px solid rgba(0,0,0,0.2);
-	font-weight: 700;
-	text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 	color: #fff;
-	cursor: pointer;
-	display: block;
-	transition: opacity 0.3s;
+	text-align: center;
+	font-weight: 700;
+	margin-right: 4px;
+	margin-bottom: 4px;
+	font-family: "Oxygen", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	-ms-border-radius: 1px;
+	border-radius: 1px;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	padding: 8px 20px;
 }
 
 .eb-pagination-button span{
