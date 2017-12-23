@@ -58,7 +58,7 @@ $.fn.embedBehance = function( options ) {
 
 		errorHtml = '<div class="eb-error-container"><pre class="eb-error">';
 
-		errorHtml += '<h3>Embed Behance</h3><h1>OPS, SOMETHING WENT WRONG!</h1>';
+		errorHtml += '<h3>Embed Behance</h3><h1>Ups!, Algo salió mal!</h1>';
 
 			for(var prop in error) {
 				

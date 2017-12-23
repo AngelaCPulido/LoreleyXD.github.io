@@ -4,7 +4,17 @@
  * The MIT License (MIT)
  */
 
-
+a {
+  color: #0bd8bc;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover, a:active, a:focus {
+  color: #0bd8bc;
+  outline: none;
+  text-decoration: none;
+}
 
 
 /* format error */
@@ -111,6 +121,7 @@
 .eb-container .wrap-title {
 	font-size: 1.2em;
 	font-weight: 900;
+	color:black;
 }
 .eb-container li, .eb-container ul li {
 	list-style: none;
@@ -136,7 +147,7 @@
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
-	vertical-align: middle;
+	vertical-align: middle;	
 }
 
 /* icons spacing */
@@ -201,8 +212,7 @@
 .eb-container .wrap-projects li .wrap-cover{
 	margin-bottom: 1.3em;
 	overflow: hidden;
-	clear: both;
-	border: 1px solid #e8e8e8; 
+	clear: both; 
 	background-color: #000;
 	position: relative;
 }
