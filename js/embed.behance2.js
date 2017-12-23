@@ -1060,96 +1060,96 @@ $.fn.embedBehance = function( options ) {
 
 	
 
-	//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
-	//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
-	//::::::::::::::::::::::::::::::::::::::: PAGINATION ::::::::::::::::::::::::::::::::::::::::://
-	//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
-	//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+	// //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+	// //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+	// //::::::::::::::::::::::::::::::::::::::: PAGINATION ::::::::::::::::::::::::::::::::::::::::://
+	// //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+	// //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
 
 
-	// Click on the button pagination to scroll
-	var isPaging = 0;
+	// // Click on the button pagination to scroll
+	// var isPaging = 0;
 
-	$(behanceContainer).on('click', '.eb-pagination-button:not(.active)', function(event){
+	// $(behanceContainer).on('click', '.eb-pagination-button:not(.active)', function(event){
 		
-		$(this).addClass('active');
-		$(this).children('.icon-loading').html(iconsSet('loading'));
+	// 	$(this).addClass('active');
+	// 	$(this).children('.icon-loading').html(iconsSet('loading'));
 
-		if (!isPaging) {
+	// 	if (!isPaging) {
 
-			isPaging = 1;
-			urlList = urlListNext;
-			// another call to load other projects in the list
-			callBehanceProjectsList();
+	// 		isPaging = 1;
+	// 		urlList = urlListNext;
+	// 		// another call to load other projects in the list
+	// 		callBehanceProjectsList();
 
-			isPaging = 0;
+	// 		isPaging = 0;
 
-		}
+	// 	}
 
-	});
+	// });
 
 
 
-	function pagination(urlListNext) {
+	// function pagination(urlListNext) {
 
-		function paginationButton(action) {
+	// 	function paginationButton(action) {
 
-			// check if the pagination button already exists
-			if( $('.eb-pagination-button').length > 0 ) {
+	// 		// check if the pagination button already exists
+	// 		if( $('.eb-pagination-button').length > 0 ) {
 
-				// if yes I remove it
-				$('.eb-pagination-button').remove();
+	// 			// if yes I remove it
+	// 			$('.eb-pagination-button').remove();
 
-			}
+	// 		}
 
-			// if there are other results to load I build the pagination button (if the infiniteScrolling is set to FALSE)
-			if(action == 'show' && settings.infiniteScrolling == true) {
+	// 		// if there are other results to load I build the pagination button (if the infiniteScrolling is set to FALSE)
+	// 		if(action == 'show' && settings.infiniteScrolling == true) {
 
-				$(behanceContainer).append('<div class="eb-pagination-button" style="background-color: ' + settings.themeColor + '"><span>Ver más</span> <span class="icon-loading"></span> </div>');
+	// 			$(behanceContainer).append('<div class="eb-pagination-button" style="background-color: ' + settings.themeColor + '"><span>Ver más</span> <span class="icon-loading"></span> </div>');
 
-			} else if (action == 'remove') {
+	// 		} else if (action == 'remove') {
 				
-				// if not I don't do anything
-				return hasAnotherPage = 0;	
-			}
+	// 			// if not I don't do anything
+	// 			return hasAnotherPage = 0;	
+	// 		}
 
-		}
+	// 	}
 
-		page++;
+	// 	page++;
 
-		// assign the new value of 'page' to the array 'urlListNext'
-		urlListNext[urlListNext.length - 1] = page;
+	// 	// assign the new value of 'page' to the array 'urlListNext'
+	// 	urlListNext[urlListNext.length - 1] = page;
 
-		urlList = urlListNext;
+	// 	urlList = urlListNext;
 
-		// convert the url for the behance API from array to string
-		urlListNext = urlListNext.join('');
+	// 	// convert the url for the behance API from array to string
+	// 	urlListNext = urlListNext.join('');
 		
-		$.ajax({
+	// 	$.ajax({
 
-			url: urlListNext,
-			dataType: 'jsonp',
+	// 		url: urlListNext,
+	// 		dataType: 'jsonp',
 
-			success: function(check) {
+	// 		success: function(check) {
 
-				if ( check.projects.length > 0 ) {
+	// 			if ( check.projects.length > 0 ) {
 					
-					paginationButton('show');
+	// 				paginationButton('show');
 
-				} else {
+	// 			} else {
 
-					paginationButton('remove');
+	// 				paginationButton('remove');
 
-				}
+	// 			}
 
-			},
-			error: function(error) {
-				console.log('Error: ', error);
-			}
+	// 		},
+	// 		error: function(error) {
+	// 			console.log('Error: ', error);
+	// 		}
 
-		});
+	// 	});
 
-	}
+	// }
 
 
 	

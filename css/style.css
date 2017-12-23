@@ -1476,3 +1476,13 @@ input[type="text"] {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+.center { 
+  -webkit-justify-content: center; 
+  justify-content: center; 
+}  
