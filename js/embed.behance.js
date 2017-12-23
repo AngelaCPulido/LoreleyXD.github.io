@@ -35,7 +35,7 @@ $.fn.embedBehance = function( options ) {
 		ownerLink: true,
 		description: true,
 		tags: true,
-		themeColor: '#2183ee',
+		themeColor: '#0bd8bc',
 		animationDuration: 1000,
 		animationEasing: 'easeInOutExpo'
 
