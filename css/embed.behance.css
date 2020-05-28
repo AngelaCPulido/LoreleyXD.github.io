@@ -5,13 +5,13 @@
  */
 
 a {
-  color: #0bd8bc;
+  color: #1a73e8;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #0bd8bc;
+  color: #1a73e8;
   outline: none;
   text-decoration: none;
 }
