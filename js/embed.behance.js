@@ -22,8 +22,8 @@ $.fn.embedBehance = function( options ) {
 		
 		// default option values										
 		owners: true,
-		appreciations: true,
-		views: true,
+		appreciations: false,
+		views: false,
 		publishedDate: true,
 		projectUrl: true,
 		fields: true,
@@ -35,7 +35,7 @@ $.fn.embedBehance = function( options ) {
 		ownerLink: true,
 		description: true,
 		tags: true,
-		themeColor: '#0bd8bc',
+		themeColor: '#1a73e8',
 		animationDuration: 1000,
 		animationEasing: 'easeInOutExpo'
 
