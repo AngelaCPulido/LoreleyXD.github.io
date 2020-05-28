@@ -1268,6 +1268,7 @@ input[type="text"] {
   -o-transition: 0.5s;
   transition: 0.5s;
   padding: 8px 20px;
+  border-radius: 10px;
 }
 .btn.btn-md {
   padding: 8px 20px !important;
