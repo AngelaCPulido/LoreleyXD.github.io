@@ -11,7 +11,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.7;
@@ -47,13 +47,13 @@ body {
 }
 
 a {
-  color: #0bd8bc;
+  color: #1a73e8;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #0bd8bc;
+  color: #174ea6;
   outline: none;
   text-decoration: none;
 }
@@ -64,24 +64,24 @@ p {
 
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
-  font-family: "Roboto Slab";
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   margin: 0 0 20px 0;
 }
 
 ::-webkit-selection {
   color: #fff;
-  background: #0bd8bc;
+  background: #1a73e8;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #0bd8bc;
+  background: #1a73e8;
 }
 
 ::selection {
   color: #fff;
-  background: #0bd8bc;
+  background: #1a73e8;
 }
 
 .container-wrap {
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .container-logo{
-  max-width: 80%;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -101,35 +101,45 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 
   .container-logo{
-  max-width: 30%;
+  max-width: 60%;
 }
 }
 
 .fh5co-nav {
-  margin: 5em 0 0 0;
+  margin: 0 0 0 0;
+  box-shadow: -1px 3px 3px 0px rgba(0,0,0,.07);
+  -webkit-box-shadow: -1px 3px 3px 0px rgba(0,0,0,.07);
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav {
     margin: 0;
+    position: fixed;
   }
 }
 .fh5co-nav .top-menu {
-  padding: 34px 30px;
+  padding: 15px 35px;
+  background-color: white;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav .top-menu {
-    padding: 28px 1em;
+    padding: 20px 1em;
+    background-color: white;
   }
 }
 .fh5co-nav #fh5co-logo {
   font-size: 24px;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Slab';
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   }
 .fh5co-nav #fh5co-logo a span {
-  color: #0bd8bc;
+  color: #1a73e8;
 }
 .fh5co-nav a {
   padding: 5px 10px;
@@ -145,7 +155,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 5px 0 0 0;
 }
 .fh5co-nav ul li {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Lato', sans-serif;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -171,7 +181,7 @@ h1, h2, h3, h4, h5, h6, figure {
   content: '';
   width: 58%;
   height: 2px;
-  background: #0bd8bc;
+  background: #1a73e8;
   margin: 0 auto;
   opacity: 0;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
@@ -252,7 +262,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
 }
 .fh5co-nav ul li.btn-cta a span {
-  background: #0bd8bc;
+  background: #1a73e8;
   padding: 4px 10px;
   display: -moz-inline-stack;
   display: inline-block;
@@ -395,7 +405,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-hero .flexslider .flex-control-nav li a.flex-active {
   cursor: pointer;
   background: transparent;
-  border: 2px solid #0bd8bc;
+  border: 2px solid #1a73e8;
 }
 #fh5co-hero .flexslider .flex-direction-nav {
   display: none;
@@ -409,8 +419,8 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-hero .flexslider .slider-text > .slider-text-inner {
   display: table-cell;
   vertical-align: middle;
-  min-height: 700px;
-  padding: 2em;
+  min-height: 650px;
+  padding: 2em 5em;
 }
 @media screen and (max-width: 768px) {
   #fh5co-hero .flexslider .slider-text > .slider-text-inner {
@@ -421,7 +431,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
   padding: 0;
   color: black;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h1 {
@@ -436,7 +446,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 30px;
@@ -465,9 +475,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner .btn {
   font-size: 12px;
-  text-transform: uppercase;
   letter-spacing: 2px;
-  color: #000;
+  font-weight: bold;
   padding: 20px 30px !important;
   border: none;
 }
@@ -514,7 +523,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .services h3 {
   font-size: 18px;
-  font-family: "Roboto Slab";
+  font-family: 'Ubuntu', sans-serif;
   letter-spacing: 1px;
   font-weight: 700;
 }
@@ -566,7 +575,7 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 480px) {
 
   .container-logo{
-  max-width: 40%;
+  max-width: 60%;
   }
 
   .work {
@@ -641,7 +650,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
   font-weight: 400;
   margin-bottom: .3em;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 .fh5co-counters .fh5co-counter-label {
   font-size: 12px;
@@ -649,7 +658,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: block;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 600;
   color: gray;
 }
@@ -726,7 +735,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 .fh5co-blog .blog-text h3 a {
   color: black;
@@ -802,7 +811,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .blog-flex .featured-blog .desc-t h3 {
   font-weight: 700;
-  font-family: "Roboto Slab";
+  font-family: 'Ubuntu', sans-serif;
   font-size: 30px;
   margin-bottom: 10px;
   line-height: 40px;
@@ -825,7 +834,7 @@ h1, h2, h3, h4, h5, h6, figure {
   letter-spacing: 2px;
   font-weight: 600;
   font-size: 14px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: white;
   border: 1px solid red;
   padding: 10px 15px;
@@ -857,7 +866,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .blog-flex .blog-entry .blog-post .desc h3 {
   font-weight: 300;
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 16px;
   line-height: 30px;
   margin-bottom: 10px;
@@ -932,7 +941,7 @@ input[type="text"] {
   margin-bottom: 30px;
 }
 .form-group .btn-modify {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -958,7 +967,7 @@ input[type="text"] {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #0bd8bc;
+  color: #1a73e8;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -977,7 +986,7 @@ input[type="text"] {
   margin-bottom: 20px;
   line-height: 1.5;
   font-weight: 700;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Ubuntu', sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #000;
@@ -1156,7 +1165,7 @@ input[type="text"] {
   height: 25px;
   cursor: pointer;
   text-decoration: none;
-  top: 25px !important;
+  top: 45px !important;
 }
 .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
   background: #444;
@@ -1166,7 +1175,8 @@ input[type="text"] {
   border-bottom: none !important;
 }
 .fh5co-nav-toggle i {
-  position: relative;
+  position: fixed;
+
   display: inline-block;
   width: 25px;
   height: 2px;
@@ -1239,7 +1249,6 @@ input[type="text"] {
   right: 0px;
   top: 65px;
   z-index: 21;
-  padding: 6px 0 0 0;
   display: block;
   margin: 0 auto;
   display: none;
@@ -1257,7 +1266,7 @@ input[type="text"] {
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: 400;
   -webkit-border-radius: 1px;
@@ -1268,6 +1277,7 @@ input[type="text"] {
   -o-transition: 0.5s;
   transition: 0.5s;
   padding: 8px 20px;
+  border-radius: 10px;
 }
 .btn.btn-md {
   padding: 8px 20px !important;
@@ -1281,21 +1291,21 @@ input[type="text"] {
 }
 
 .btn-primary {
-  background: #0bd8bc;
+  background: #1a73e8;
   color: #fff;
-  border: 2px solid #0bd8bc;
+  border: 2px solid #1a73e8;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #22f5d8 !important;
-  border-color: #22f5d8 !important;
+  background: #174ea6 !important;
+  border-color: #174ea6 !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #0bd8bc;
-  border: 2px solid #0bd8bc;
+  color: #1a73e8;
+  border: 2px solid #1a73e8;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #0bd8bc;
+  background: #1a73e8;
   color: #fff;
 }
 
@@ -1319,13 +1329,13 @@ input[type="text"] {
 }
 
 .btn-info {
-  background: #5bc0de;
+  background: #174ea6;
   color: #fff;
-  border: 2px solid #5bc0de;
+  border: 2px solid #174ea6;
 }
 .btn-info:hover, .btn-info:focus, .btn-info:active {
-  background: #46b8da !important;
-  border-color: #46b8da !important;
+  background: #174ea6 !important;
+  border-color: #174ea6 !important;
 }
 .btn-info.btn-outline {
   background: transparent;
@@ -1425,7 +1435,7 @@ input[type="text"] {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #0bd8bc;
+  border-color: #1a73e8;
 }
 
 .row-pb-md {

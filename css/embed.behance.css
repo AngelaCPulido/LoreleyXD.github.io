@@ -5,13 +5,13 @@
  */
 
 a {
-  color: #0bd8bc;
+  color: #1a73e8;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #0bd8bc;
+  color: #1a73e8;
   outline: none;
   text-decoration: none;
 }
@@ -125,7 +125,7 @@ a:hover, a:active, a:focus {
 }
 
 .eb-container .wrap-title {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 20px;
 	font-weight: 900;
 	color:black;
@@ -222,6 +222,7 @@ a:hover, a:active, a:focus {
 	clear: both; 
 	background-color: #000;
 	position: relative;
+	border-radius: 20px;
 }
 
 .eb-container .wrap-projects li .wrap-cover img{
@@ -612,7 +613,7 @@ body.eb-detail-modal-active{
 }
 
 .eb-container aside.open .bh-show {
-	color: #f;
+	color: #ffff;
 	background-color: #f8f8f8;
 }
 

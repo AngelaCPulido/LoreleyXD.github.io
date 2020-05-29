@@ -22,8 +22,13 @@ $.fn.embedBehance = function( options ) {
 		
 		// default option values										
 		owners: true,
+<<<<<<< HEAD
 		appreciations: true,
 		views: true,
+=======
+		appreciations: false,
+		views: false,
+>>>>>>> New-portfolio
 		publishedDate: true,
 		projectUrl: true,
 		fields: true,
@@ -35,7 +40,11 @@ $.fn.embedBehance = function( options ) {
 		ownerLink: true,
 		description: true,
 		tags: true,
+<<<<<<< HEAD
 		themeColor: '#0bd8bc',
+=======
+		themeColor: '#1a73e8',
+>>>>>>> New-portfolio
 		animationDuration: 1000,
 		animationEasing: 'easeInOutExpo'
 

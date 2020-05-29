@@ -898,6 +898,7 @@ pre code {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 45px;
 }
 .container-fluid:before, .container-fluid:after {
   content: " ";
@@ -936,6 +937,12 @@ pre code {
 
 .col-xs-2 {
   width: 16.66667%;
+}
+
+@media screen and (max-width: 768px) {
+  .col-xs-2 {
+    width: 80%;
+  }
 }
 
 .col-xs-3 {
