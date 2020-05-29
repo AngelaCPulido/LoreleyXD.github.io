@@ -939,6 +939,12 @@ pre code {
   width: 16.66667%;
 }
 
+@media screen and (max-width: 768px) {
+  .col-xs-2 {
+    width: 80%;
+  }
+}
+
 .col-xs-3 {
   width: 25%;
 }
