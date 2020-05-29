@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .container-logo{
-  max-width: 90%;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 
   .container-logo{
-  max-width: 30%;
+  max-width: 60%;
 }
 }
 
@@ -419,8 +419,8 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-hero .flexslider .slider-text > .slider-text-inner {
   display: table-cell;
   vertical-align: middle;
-  min-height: 700px;
-  padding: 2em;
+  min-height: 650px;
+  padding: 2em 5em;
 }
 @media screen and (max-width: 768px) {
   #fh5co-hero .flexslider .slider-text > .slider-text-inner {
@@ -575,7 +575,7 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 480px) {
 
   .container-logo{
-  max-width: 40%;
+  max-width: 60%;
   }
 
   .work {
