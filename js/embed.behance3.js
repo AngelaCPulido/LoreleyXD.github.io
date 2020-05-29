@@ -21,21 +21,32 @@ $.fn.embedBehance = function( options ) {
 	var settings = $.extend({
 		
 		// default option values										
+<<<<<<< Updated upstream
 		owners: true,
-		appreciations: true,
-		views: true,
+		appreciations: false,
+		views: false,
 		publishedDate: true,
+=======
+		owners: false,
+		appreciations: false,
+		views: false,
+		publishedDate: false,
+>>>>>>> Stashed changes
 		projectUrl: true,
 		fields: true,
 		apiKey: '',
-		itemsPerPage: '3',
+		itemsPerPage: '6',
 		userName: '',
 		infiniteScrolling: false,
 		imageCaption: false,
-		ownerLink: true,
+		ownerLink: false,
 		description: true,
 		tags: true,
-		themeColor: '#0bd8bc',
+<<<<<<< Updated upstream
+		themeColor: '#1a73e8',
+=======
+		themeColor: '#0026ca',
+>>>>>>> Stashed changes
 		animationDuration: 1000,
 		animationEasing: 'easeInOutExpo'
 
@@ -125,7 +136,7 @@ $.fn.embedBehance = function( options ) {
 
 
 	// double wrap the body
-	$('body').wrapInner( $('<div>').addClass('eb-total-inner-container') ).wrapInner( $('<div>').addClass('eb-total-outer-container') );
+	$('section').wrapInner( $('<div>').addClass('eb-total-inner-container') ).wrapInner( $('<div>').addClass('eb-total-outer-container') );
 
 
 	// get the HTML selector where the plugin will be initialized
@@ -134,7 +145,7 @@ $.fn.embedBehance = function( options ) {
 	// create the main container that hosts the projects list
 	$(behanceContainer).html('<ul class="wrap-projects"></ul>');
 
-	$('body').append(iconsSet('<div class="eb-loadingicon">' + iconsSet('loading') + '</div>'));
+	$('section').append(iconsSet('<div class="eb-loadingicon">' + iconsSet('loading') + '</div>'));
 	
 
 
@@ -154,7 +165,7 @@ $.fn.embedBehance = function( options ) {
 	// ajax call to fetch the behance data to build the projects list
 	var callBehanceProjectsList = function() {
 
-		$('body').append('<div class="eb-loadingicon">' + iconsSet('loading') + '</div>');
+		$('section').append('<div class="eb-loadingicon">' + iconsSet('loading') + '</div>');
 
 		// create urlListNext to check for the next pagination
 		urlListNext = urlList;
@@ -198,7 +209,7 @@ $.fn.embedBehance = function( options ) {
 	// ajax call to fetch the behance data to build the project detail
 	var callBehanceProjectDetail = function(urlDetail) {
 
-		$('body').append('<div class="eb-loadingicon">' + iconsSet('loading') + '</div>');
+		$('section').append('<div class="eb-loadingicon">' + iconsSet('loading') + '</div>');
 
 		// reset dataextracted
 		dataExtracted = [];
@@ -1060,147 +1071,147 @@ $.fn.embedBehance = function( options ) {
 
 	
 
-	// //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
-	// //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
-	// //::::::::::::::::::::::::::::::::::::::: PAGINATION ::::::::::::::::::::::::::::::::::::::::://
-	// //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
-	// //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+	//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+	//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+	//::::::::::::::::::::::::::::::::::::::: PAGINATION ::::::::::::::::::::::::::::::::::::::::://
+	//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+	//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
 
 
-	// // Click on the button pagination to scroll
-	// var isPaging = 0;
+	// Click on the button pagination to scroll
+	var isPaging = 0;
 
-	// $(behanceContainer).on('click', '.eb-pagination-button:not(.active)', function(event){
+	$(behanceContainer).on('click', '.eb-pagination-button:not(.active)', function(event){
 		
-	// 	$(this).addClass('active');
-	// 	$(this).children('.icon-loading').html(iconsSet('loading'));
+		$(this).addClass('active');
+		$(this).children('.icon-loading').html(iconsSet('loading'));
 
-	// 	if (!isPaging) {
+		if (!isPaging) {
 
-	// 		isPaging = 1;
-	// 		urlList = urlListNext;
-	// 		// another call to load other projects in the list
-	// 		callBehanceProjectsList();
+			isPaging = 1;
+			urlList = urlListNext;
+			// another call to load other projects in the list
+			callBehanceProjectsList();
 
-	// 		isPaging = 0;
+			isPaging = 0;
 
-	// 	}
+		}
 
-	// });
+	});
 
 
 
-	// function pagination(urlListNext) {
+	function pagination(urlListNext) {
 
-	// 	function paginationButton(action) {
+		function paginationButton(action) {
 
-	// 		// check if the pagination button already exists
-	// 		if( $('.eb-pagination-button').length > 0 ) {
+			// check if the pagination button already exists
+			if( $('.eb-pagination-button').length > 0 ) {
 
-	// 			// if yes I remove it
-	// 			$('.eb-pagination-button').remove();
+				// if yes I remove it
+				$('.eb-pagination-button').remove();
 
-	// 		}
+			}
 
-	// 		// if there are other results to load I build the pagination button (if the infiniteScrolling is set to FALSE)
-	// 		if(action == 'show' && settings.infiniteScrolling == true) {
+			// if there are other results to load I build the pagination button (if the infiniteScrolling is set to FALSE)
+			if(action == 'show' && settings.infiniteScrolling == false) {
 
-	// 			$(behanceContainer).append('<div class="eb-pagination-button" style="background-color: ' + settings.themeColor + '"><span>Ver más</span> <span class="icon-loading"></span> </div>');
+				$(behanceContainer).append('<div class="eb-pagination-button" style="background-color: ' + settings.themeColor + '"><span>Load More</span> <span class="icon-loading"></span> </div>');
 
-	// 		} else if (action == 'remove') {
+			} else if (action == 'remove') {
 				
-	// 			// if not I don't do anything
-	// 			return hasAnotherPage = 0;	
-	// 		}
+				// if not I don't do anything
+				return hasAnotherPage = 0;	
+			}
 
-	// 	}
+		}
 
-	// 	page++;
+		page++;
 
-	// 	// assign the new value of 'page' to the array 'urlListNext'
-	// 	urlListNext[urlListNext.length - 1] = page;
+		// assign the new value of 'page' to the array 'urlListNext'
+		urlListNext[urlListNext.length - 1] = page;
 
-	// 	urlList = urlListNext;
+		urlList = urlListNext;
 
-	// 	// convert the url for the behance API from array to string
-	// 	urlListNext = urlListNext.join('');
+		// convert the url for the behance API from array to string
+		urlListNext = urlListNext.join('');
 		
-	// 	$.ajax({
+		$.ajax({
 
-	// 		url: urlListNext,
-	// 		dataType: 'jsonp',
+			url: urlListNext,
+			dataType: 'jsonp',
 
-	// 		success: function(check) {
+			success: function(check) {
 
-	// 			if ( check.projects.length > 0 ) {
+				if ( check.projects.length > 0 ) {
 					
-	// 				paginationButton('show');
+					paginationButton('show');
 
-	// 			} else {
+				} else {
 
-	// 				paginationButton('remove');
+					paginationButton('remove');
 
-	// 			}
+				}
 
-	// 		},
-	// 		error: function(error) {
-	// 			console.log('Error: ', error);
-	// 		}
+			},
+			error: function(error) {
+				console.log('Error: ', error);
+			}
 
-	// 	});
+		});
 
-	// }
-
-
-	
+	}
 
 
 	
 
-	// //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
-	// //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
-	// //::::::::::::::::::::::::::::::::::: INFINITE SCROLLING ::::::::::::::::::::::::::::::::::::://
-	// //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
-	// //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+
 	
 
-	// // if infiniteScrolling is set
-	// if(settings.infiniteScrolling == true) {
+	//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+	//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+	//::::::::::::::::::::::::::::::::::: INFINITE SCROLLING ::::::::::::::::::::::::::::::::::::://
+	//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+	//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+	
 
-	// 	var timeout;
+	// if infiniteScrolling is set
+	if(settings.infiniteScrolling == true) {
+
+		var timeout;
 		
-	// 	$(window).on('scroll', function(){
+		$(window).on('scroll', function(){
 
-	// 		// the timeout is cleared every time '(window).on.scroll' is triggered			
-	// 		clearTimeout(timeout); 
+			// the timeout is cleared every time '(window).on.scroll' is triggered			
+			clearTimeout(timeout); 
 			
-	// 		// fire the pagination only if I'm scolling at the bottom of the page and I'm NOT scrolling the detail
-	// 		if(hasAnotherPage == 1 && isDetail == 0) {
+			// fire the pagination only if I'm scolling at the bottom of the page and I'm NOT scrolling the detail
+			if(hasAnotherPage == 1 && isDetail == 0) {
 
-	// 			var	divTop = $(behanceContainer).offset().top,
-	// 			   	divHeight = $(behanceContainer).outerHeight(),
-	// 			  	wHeight = $(window).height(),
-	// 			   	scrollBarPosition = $(this).scrollTop();
+				var	divTop = $(behanceContainer).offset().top,
+				   	divHeight = $(behanceContainer).outerHeight(),
+				  	wHeight = $(window).height(),
+				   	scrollBarPosition = $(this).scrollTop();
 
-	// 			if (scrollBarPosition > (divTop+divHeight-wHeight-50) && !infinitePaginationOnGoing){
+				if (scrollBarPosition > (divTop+divHeight-wHeight-50) && !infinitePaginationOnGoing){
 
-	// 				timeout = setTimeout(function() {
+					timeout = setTimeout(function() {
 						
-	// 					// request on going, so other requests can not overlap
-	// 					infinitePaginationOnGoing = 1;
+						// request on going, so other requests can not overlap
+						infinitePaginationOnGoing = 1;
 
-	// 					urlList = urlListNext;
+						urlList = urlListNext;
 						
-	// 					//another call to load other projects in the list
-	// 					callBehanceProjectsList();
+						//another call to load other projects in the list
+						callBehanceProjectsList();
 
-	// 				}, 300);
-	// 			}
-	// 		}
+					}, 300);
+				}
+			}
 
-	// 	});
+		});
 
-	// }
+	}
 
 
 
