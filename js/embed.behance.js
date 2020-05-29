@@ -21,10 +21,17 @@ $.fn.embedBehance = function( options ) {
 	var settings = $.extend({
 		
 		// default option values										
+<<<<<<< Updated upstream
 		owners: true,
 		appreciations: false,
 		views: false,
 		publishedDate: true,
+=======
+		owners: false,
+		appreciations: false,
+		views: false,
+		publishedDate: false,
+>>>>>>> Stashed changes
 		projectUrl: true,
 		fields: true,
 		apiKey: '',
@@ -32,10 +39,14 @@ $.fn.embedBehance = function( options ) {
 		userName: '',
 		infiniteScrolling: false,
 		imageCaption: false,
-		ownerLink: true,
+		ownerLink: false,
 		description: true,
 		tags: true,
+<<<<<<< Updated upstream
 		themeColor: '#1a73e8',
+=======
+		themeColor: '#0026ca',
+>>>>>>> Stashed changes
 		animationDuration: 1000,
 		animationEasing: 'easeInOutExpo'
 
@@ -125,7 +136,7 @@ $.fn.embedBehance = function( options ) {
 
 
 	// double wrap the body
-	$('body').wrapInner( $('<div>').addClass('eb-total-inner-container') ).wrapInner( $('<div>').addClass('eb-total-outer-container') );
+	$('section').wrapInner( $('<div>').addClass('eb-total-inner-container') ).wrapInner( $('<div>').addClass('eb-total-outer-container') );
 
 
 	// get the HTML selector where the plugin will be initialized
@@ -134,7 +145,7 @@ $.fn.embedBehance = function( options ) {
 	// create the main container that hosts the projects list
 	$(behanceContainer).html('<ul class="wrap-projects"></ul>');
 
-	$('body').append(iconsSet('<div class="eb-loadingicon">' + iconsSet('loading') + '</div>'));
+	$('section').append(iconsSet('<div class="eb-loadingicon">' + iconsSet('loading') + '</div>'));
 	
 
 
@@ -154,7 +165,7 @@ $.fn.embedBehance = function( options ) {
 	// ajax call to fetch the behance data to build the projects list
 	var callBehanceProjectsList = function() {
 
-		$('body').append('<div class="eb-loadingicon">' + iconsSet('loading') + '</div>');
+		$('section').append('<div class="eb-loadingicon">' + iconsSet('loading') + '</div>');
 
 		// create urlListNext to check for the next pagination
 		urlListNext = urlList;
@@ -198,7 +209,7 @@ $.fn.embedBehance = function( options ) {
 	// ajax call to fetch the behance data to build the project detail
 	var callBehanceProjectDetail = function(urlDetail) {
 
-		$('body').append('<div class="eb-loadingicon">' + iconsSet('loading') + '</div>');
+		$('section').append('<div class="eb-loadingicon">' + iconsSet('loading') + '</div>');
 
 		// reset dataextracted
 		dataExtracted = [];
